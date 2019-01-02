@@ -56,6 +56,19 @@ func NewBlock(data string, PrevBlockHash []byte) *Block {
 
 }
 
+//将字节数组反序列化成Block
+func DeserializeBlock(d []byte) *Block {
+	var block Block
+
+	decoder := gob.NewDecoder(bytes.NewReader(d))
+	err := decoder.Decode(&block)
+	if err != nil {
+		log.Panic(err)
+	}
+
+	return &block
+}
+
 //创建创世区块，并返回创世区块
 func NewGenesisBlock() *Block {
 	return NewBlock("Genesis Block", []byte{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0})
