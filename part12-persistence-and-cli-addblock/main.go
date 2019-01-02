@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"publicchain/part12-persistence-and-cli/BLC"
+	"publicchain/part12-persistence-and-cli-addblock/BLC"
 )
 
 func main() {
