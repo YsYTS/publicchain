@@ -10,7 +10,7 @@ import (
 	"github.com/boltdb/bolt"
 )
 
-const bolcksBucket = "blocks"
+const blocksBucket = "blocks"
 
 func main() {
 	blockchain := BLC.NewBlockchain()
@@ -38,7 +38,7 @@ func main() {
 		fmt.Printf("%x\n", blockchainIterator.CurrentHash)
 		err := blockchainIterator.DB.View(func(tx *bolt.Tx) error {
 			//获取表
-			b := tx.Bucket([]byte(bolcksBucket))
+			b := tx.Bucket([]byte(blocksBucket))
 			//通过hash获取区块字节数组
 			blockBytes := b.Get(blockchainIterator.CurrentHash)
 			//反序列化
