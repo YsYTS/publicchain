@@ -1,7 +1,7 @@
 package main
 
 import (
-	"publicchain/part19-transactions/BLC"
+	"publicchain/part19-transactions-findunspenttransactions/BLC"
 )
 
 func main() {
