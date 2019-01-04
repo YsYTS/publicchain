@@ -1,2 +1,2 @@
 # publicchain
- This is a public chain demo.
+ This is my public chain demo.
