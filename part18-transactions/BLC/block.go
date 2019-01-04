@@ -35,6 +35,8 @@ func (b *Block) Serialize() []byte {
 	return result.Bytes()
 }
 
+//提供给挖矿时使用
+//将区块中所有的交易的ID拼接，并生成hash
 func (b *Block) HashTransactions() []byte {
 	var txHashes [][]byte
 	var txHash [32]byte
