@@ -75,17 +75,24 @@ func (cli *Cli) printChain() {
 }
 
 func (cli *Cli) sendToken() {
+
 	// 1. 10 -> wangkun
-	//2. 3 -> 转给tushen
-	//(1)新建一个交易
+	// 2. 3 -> 转给tushen
+	// (1)新建一个交易
+
 	tx1 := NewUTXOTransaction("wangkun", "tushen", 3, cli.BC)
 	tx2 := NewUTXOTransaction("wangkun", "tushen", 2, cli.BC)
+
 	cli.BC.MineBlock([]*Transaction{tx1, tx2})
 }
 
 func (cli *Cli) addBlock(data string) {
 
-	//cli.sendToken()
+	// count, outputMap := cli.BC.FindSpendableOutPuts("wangkun", 5)
+	// fmt.Println(count)
+	// fmt.Println(outputMap)
+
+	// cli.sendToken()
 	tx := cli.BC.FindUnspentTransactions("wangkun")
 	fmt.Println("print wangkun:")
 	fmt.Println(tx)

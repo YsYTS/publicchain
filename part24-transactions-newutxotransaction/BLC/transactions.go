@@ -83,6 +83,7 @@ func NewUTXOTransaction(from, to string, amount int, bc *Blockchain) *Transactio
 
 	//建立输出————找零
 	output = TXOutput{acc - amount, from}
+	outputs = append(outputs, output)
 
 	//创建交易
 	tx := Transaction{nil, inputs, outputs}
