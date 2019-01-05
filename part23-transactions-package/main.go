@@ -1,7 +1,7 @@
 package main
 
 import (
-	"publicchain/part23-transactions-newutxotransaction/BLC"
+	"publicchain/part23-transactions-package/BLC"
 )
 
 func main() {
