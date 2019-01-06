@@ -1,7 +1,7 @@
 package main
 
 import (
-	"publicchain/part25-transactions/BLC"
+	"publicchain/part25-transactions-repair/BLC"
 )
 
 func main() {
